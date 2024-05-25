@@ -312,15 +312,4 @@ def split_function(path="",num_of_spk=100,language="",num_sample=5):
             else:
                 print('Error: The number of user selected must be less or equal ',num_max_spk)
 
-def main():
 
-    parser = argparse.ArgumentParser(description='Generate file Train and test')
-    parser.add_argument('--lan', dest='lan', default='English',choices=['English','Spanish','French','German'], type=str, action='store', help='')
-    parser.add_argument('--file_path', dest='file_path', default="metadata.csv", type=str, action='store', help='Base path for validation trials')
-    parser.add_argument('--num_of_spk', dest='num_of_spk', default=1020, type=int, action='store', help='')
-    parser.add_argument('--min_samples', dest='min_samples', default=100, type=int, action='store', help='')
-    args = parser.parse_args()
-    split_function(path=args.file_path,language=args.lan,num_of_spk=args.num_of_spk,num_sample=args.min_samples)
-
-if __name__== "__main__":
-  main()
