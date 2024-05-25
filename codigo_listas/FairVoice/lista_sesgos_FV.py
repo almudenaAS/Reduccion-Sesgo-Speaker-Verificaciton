@@ -1,0 +1,1 @@
+#Listas Sesgos FairVoice Balanceado 
